@@ -9,7 +9,7 @@ client.on('ready', () => {
 });
 
 client.on('message', msg => {
-    if ((msg.content === ";speak")  && (msg.author.id !== "775229682743902260")) {
+    if ((msg.content === ";speak")  && (msg.author.id !== client.id)) {
       fs.readFile(`./information.json`, 'utf8', function (err,data) {
         data = JSON.parse(data);
         let rand = Math.floor(Math.random() * data.length)
