@@ -1,7 +1,8 @@
+const Token = "";
 const Discord = require('discord.js');
 const client = new Discord.Client();
-let embed = new Discord.MessageEmbed();
 const fs = require('fs');
+let embed = new Discord.MessageEmbed();
 
 client.on('ready', () => {
     console.log('Started');
@@ -11,16 +12,12 @@ client.on('ready', () => {
 client.on('message', msg => {
     if ((msg.content === ";speak")  && (msg.author.id !== client.id)) {
       fs.readFile(`./information.json`, 'utf8', function (err,data) {
+        if (err) console.log(err);
         data = JSON.parse(data);
-        let rand = Math.floor(Math.random() * data.length)
-        embed
-          .setColor('#0099ff')
-          .setTitle(`Random message | not generated`)
-          .setDescription(data[rand])
-          .setFooter(`Message ${rand}/${data.length}`)
-        msg.channel.send(embed)
+        let rand = Math.floor(Math.random() * data.length);
+        msg.channel.send(data[rand][0].replace((/<@.?[0-9]*?>/g, "")).replace("undefined", ""));
       })
     }
 })
 
-client.login('token');
+client.login(Token);
