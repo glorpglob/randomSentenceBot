@@ -3,4 +3,4 @@ This bot chooses a random sentence and then says it, this is intended to be used
 
 retrieveDiscordMessages can be found at https://github.com/widesteal321/retrieveDiscordMessages/
 
-This is a DISCORD BOT.
+This is a Discord bot and is not availible in TypeScript.
