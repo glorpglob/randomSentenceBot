@@ -14,7 +14,7 @@ client.on('message', msg => {
         if (err) console.log(err);
         data = JSON.parse(data);
         let rand = Math.floor(Math.random() * data.length);
-        msg.channel.send(data[rand][0].replace((/<@.?[0-9]*?>/g, "")).replace("undefined", ""));
+        msg.channel.send(data[rand][0].replace((/<@.?[0-9]*?>/g, "")));
       })
     }
 })
