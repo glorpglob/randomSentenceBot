@@ -1,6 +1,4 @@
 # randomSentenceBot
 This bot chooses a random sentence and then says it, this is intended to be used with Discord.js and retrieveDiscordMessages.
 
-retrieveDiscordMessages can be found at https://github.com/widesteal321/retrieveDiscordMessages/
-
-This is a Discord bot and is not availible in TypeScript.
+retrieveDiscordMessages can be found at https://github.com/glorpglob/retrieveDiscordMessages/
